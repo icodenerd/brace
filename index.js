@@ -3255,7 +3255,7 @@ function GutterHandler(mouseHandler) {
     }
 
     function moveTooltip(e) {
-        tooltip.setPosition(e.x, e.y);
+        tooltip.setPosition(e.domEvent.layerX, e.domEvent.layerY);//e.x, e.y);
     }
 
     mouseHandler.editor.setDefaultHandler("guttermousemove", function(e) {
